@@ -21,6 +21,12 @@ class MainActivity : AppCompatActivity() {
 
         // 画面の要素取得
         val messageView: TextView = findViewById(R.id.messageView)
-        var waterBtn: Button = findViewById(R.id.waterBtn)
+        val waterBtn: Button = findViewById(R.id.waterBtn)
+
+        var count = 0
+        waterBtn.setOnClickListener {
+            count++
+            messageView.text = "$count"
+        }
     }
 }
