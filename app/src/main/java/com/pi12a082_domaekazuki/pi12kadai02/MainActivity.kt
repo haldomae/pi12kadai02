@@ -1,6 +1,7 @@
 package com.pi12a082_domaekazuki.pi12kadai02
 
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
@@ -32,6 +33,8 @@ class MainActivity : AppCompatActivity() {
             if(10 < count){
                 messageView.text = getString(R.string.message0)
                 flowerImage.setImageResource(R.drawable.f1)
+                waterBtn.visibility = View.INVISIBLE
+                resetBtn.visibility = View.VISIBLE
             }
 
         }
@@ -40,6 +43,8 @@ class MainActivity : AppCompatActivity() {
             count = 0
             messageView.text = getString(R.string.message)
             flowerImage.setImageResource(R.drawable.f0)
+            waterBtn.visibility = View.VISIBLE
+            resetBtn.visibility = View.INVISIBLE
         }
     }
 }
