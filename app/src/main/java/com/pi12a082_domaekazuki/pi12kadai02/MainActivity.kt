@@ -2,6 +2,7 @@ package com.pi12a082_domaekazuki.pi12kadai02
 
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -22,11 +23,13 @@ class MainActivity : AppCompatActivity() {
         // 画面の要素取得
         val messageView: TextView = findViewById(R.id.messageView)
         val waterBtn: Button = findViewById(R.id.waterBtn)
+        val flowerImage: ImageView = findViewById(R.id.flowerImage)
 
         var count = 0
         waterBtn.setOnClickListener {
             count++
-            messageView.text = "$count"
+            messageView.text = getString(R.string.message0)
+            flowerImage.setImageResource(R.drawable.f1)
         }
     }
 }
