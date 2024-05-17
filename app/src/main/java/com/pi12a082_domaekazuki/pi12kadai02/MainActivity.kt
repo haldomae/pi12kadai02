@@ -28,8 +28,11 @@ class MainActivity : AppCompatActivity() {
         var count = 0
         waterBtn.setOnClickListener {
             count++
-            messageView.text = getString(R.string.message0)
-            flowerImage.setImageResource(R.drawable.f1)
+            if(10 < count){
+                messageView.text = getString(R.string.message0)
+                flowerImage.setImageResource(R.drawable.f1)
+            }
+
         }
     }
 }
