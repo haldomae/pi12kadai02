@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         val messageView: TextView = findViewById(R.id.messageView)
         val waterBtn: Button = findViewById(R.id.waterBtn)
         val flowerImage: ImageView = findViewById(R.id.flowerImage)
+        val resetBtn: Button = findViewById(R.id.resetBtn)
 
         var count = 0
         waterBtn.setOnClickListener {
@@ -33,6 +34,12 @@ class MainActivity : AppCompatActivity() {
                 flowerImage.setImageResource(R.drawable.f1)
             }
 
+        }
+
+        resetBtn.setOnClickListener {
+            count = 0
+            messageView.text = getString(R.string.message)
+            flowerImage.setImageResource(R.drawable.f0)
         }
     }
 }
